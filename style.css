@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --main-color: #f4f4f4;
+    --secondary-color: #ffffff;
+    --text-color: #000000;
+    --canvas-size: 512px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font: normal 400 16px 'Dosis', tahoma;
+}
+
+#header, #footer, a {
+    background-color: var(--secondary-color);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header {
+    padding: 32px 0;
+    font: normal 400 32px 'Shantell Sans', tahoma;
+    letter-spacing: 4px;
+}
+
+#body {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: 32px;
+}
+
+#menu {
+    width: 128px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+#color {
+    width: 64px;
+    height: 64px;
+    border: 2px solid;
+    border-radius: 32px;
+}
+
+#color::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+
+#color::-webkit-color-swatch {
+	border: none;
+}
+
+#menu > button {
+    width: 100%;
+    height: 32px;
+    border: 2px solid;
+    border-radius: 8px;
+    font: normal 400 16px 'Dosis', tahoma;
+}
+
+#menu > button:hover {
+    background-color: rgb(from var(--text-color) r g b / 0.2);
+}
+
+#slider {
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: var(--secondary-color);
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: var(--text-color);
+    border-radius: 4px;
+}
+
+#slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background: var(--text-color);
+}
+
+#canvas {
+    background-color: var(--secondary-color);
+    width: var(--canvas-size);
+    height: var(--canvas-size);
+    border: 2px solid var(--text-color);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#footer {
+    padding: 16px 0;
+}
+
+#footer > a {
+    gap: 8px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+#github {
+    width: 16px;
+    height: 16px;
+}

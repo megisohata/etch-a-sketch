@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Etch-a-Sketch</title>
+    <link rel="icon" href="./site-icon.png">
+</head>
+<body>
+    <div id="header">
+        <h1>Etch-a-Sketch</h1>
+    </div>
+    <div id="body">
+        <div id="menu">
+            <input type = "color" id="color">
+            <button id="pen">Pen</button>
+            <button id="shade">Shade</button>
+            <button id="rainbow">Rainbow</button>
+            <button id="eraser">Eraser</button>
+            <p id="slider-label">50 x 50</p>
+            <input type="range" min="1" max="100" value="50" id="slider">
+            <button id="clear">Clear</button>
+        </div>
+        <div id="canvas"></div>
+    </div>
+    <div id="footer">
+        <a href="https://github.com/megisohata/etch-a-sketch" target="_blank">
+            <img id="github" src="./github.png">
+            <p>megisohata</p>
+        </a>
+    </div>
+    <script src="./script.js" defer></script>
+</body>
+</html>
