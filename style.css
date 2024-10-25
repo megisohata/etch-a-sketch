@@ -77,7 +77,7 @@ html, body {
     font: normal 400 16px 'Dosis', tahoma;
 }
 
-#menu > button:hover {
+#menu > button:hover, #menu > button.active {
     background-color: rgb(from var(--text-color) r g b / 0.2);
 }
 

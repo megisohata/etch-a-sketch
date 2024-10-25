@@ -87,6 +87,13 @@ function buildCanvas(dimension) {
     }
 }
 
+function makeInactive() {
+    pen.classList.remove("active");
+    shade.classList.remove("active");
+    rainbow.classList.remove("active");
+    eraser.classList.remove("active");
+}
+
 /**
  * Change pen color when color wheel has been selected.
  */
@@ -100,6 +107,8 @@ color.addEventListener("input", () => {
 pen.addEventListener("click", () => {
     mode = "pen";
     penColor = color.value;
+    makeInactive();
+    pen.classList.add("active");
 });
 
 /**
@@ -108,6 +117,8 @@ pen.addEventListener("click", () => {
 shade.addEventListener("click", () => {
     mode = "shade";
     penColor = color.value;
+    makeInactive();
+    shade.classList.add("active");
 });
 
 /**
@@ -115,6 +126,8 @@ shade.addEventListener("click", () => {
  */
 rainbow.addEventListener("click", () => {
     mode = "rainbow";
+    makeInactive();
+    rainbow.classList.add("active");
 });
 
 /**
@@ -122,6 +135,8 @@ rainbow.addEventListener("click", () => {
  */
 eraser.addEventListener("click", () => {
     mode = "eraser";
+    makeInactive();
+    eraser.classList.add("active");
 });
 
 /**
