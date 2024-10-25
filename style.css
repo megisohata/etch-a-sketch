@@ -4,7 +4,7 @@
     --main-color: #f4f4f4;
     --secondary-color: #ffffff;
     --text-color: #000000;
-    --canvas-size: 512px;
+    --canvas-size: 512;
 }
 
 * {
@@ -81,6 +81,10 @@ html, body {
     background-color: rgb(from var(--text-color) r g b / 0.2);
 }
 
+#slider-group {
+    text-align: center;
+}
+
 #slider {
     appearance: none;
     width: 100%;
@@ -102,8 +106,8 @@ html, body {
 
 #canvas {
     background-color: var(--secondary-color);
-    width: var(--canvas-size);
-    height: var(--canvas-size);
+    width: calc(var(--canvas-size) * 1px);
+    height: calc(var(--canvas-size) * 1px);
     border: 2px solid var(--text-color);
     display: flex;
     flex-wrap: wrap;
@@ -122,4 +126,50 @@ html, body {
 #github {
     width: 16px;
     height: 16px;
+}
+
+@media screen and (max-width: 800px) {
+    :root {
+        --canvas-size: 400;
+    }
+
+    #header {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    :root {
+        --canvas-size: 320;
+    }
+
+    #header {
+        font-size: 16px;
+    }
+
+    #body {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+    }
+
+    #menu {
+        width: calc(var(--canvas-size) * 1px);
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    #color {
+        height: 32px;
+        border-radius: 8px;
+    }
+
+    #menu > button {
+        width: 64px;
+        height: 32px;
+        border: 2px solid;
+        border-radius: 8px;
+        font: normal 400 16px 'Dosis', tahoma;
+    }
 }
